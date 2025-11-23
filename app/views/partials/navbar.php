@@ -121,6 +121,15 @@
                 <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
             </div>
         </li>
+        <li class="nav-item d-flex align-items-center">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="darkModeSwitch" aria-label="Alternar modo oscuro">
+                <label class="custom-control-label" for="darkModeSwitch" title="Modo oscuro">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </label>
+            </div>
+        </li>
+       
         <li class="nav-item">
             <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                 <i class="fas fa-expand-arrows-alt"></i>

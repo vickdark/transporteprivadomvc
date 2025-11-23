@@ -1,4 +1,4 @@
- <footer class="main-footer">
+<footer class="main-footer">
      <div class="float-right d-none d-sm-block">
          <b>Version</b> 3.2.0
      </div>
@@ -18,10 +18,13 @@
  <script src="public/assets/resourses/plugins/jquery/jquery.min.js"></script>
  <!-- Bootstrap 4 -->
  <script src="public/assets/resourses/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <!-- OverlayScrollbars -->
+ <script src="public/assets/resourses/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
  <!-- AdminLTE App -->
  <script src="public/assets/resourses/dist/js/adminlte.min.js"></script>
  <!-- AdminLTE for demo purposes -->
  <script src="public/assets/resourses/dist/js/demo.js"></script>
+ <script src="public/assets/resourses/js/darkmode.js"></script>
  </body>
-
+ 
  </html>
