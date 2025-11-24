@@ -1,10 +1,7 @@
 <?php
-# Head - Librerias y head de todo el sistemas
-include 'partials/header.php';
-# Navbar - Barra de navegacion
-include 'partials/navbar.php';
-# Sidebar - Barra lateral
-include 'partials/sidebar.php';
+include __DIR__ . '/partials/header.php';
+include __DIR__ . '/partials/navbar.php';
+include __DIR__ . '/partials/sidebar.php';
 ?>
 
 <!-- Content Wrapper - Contenido principal -->
@@ -25,6 +22,5 @@ include 'partials/sidebar.php';
 </div>
 
 <?php 
-# Footer - Pie de pagina
-include 'partials/footer.php'; 
+include __DIR__ . '/partials/footer.php'; 
 ?>

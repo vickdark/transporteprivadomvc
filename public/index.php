@@ -1,9 +1,10 @@
 <?php
-require_once "../app/core/Router.php";
-require_once "../app/controllers/home/home.controller.php";
-require_once "../app/controllers/usuarios/usuarios.controller.php";
-require_once "../app/controllers/vehiculos/vehiculos.controller.php";
-require_once "../app/controllers/viajes/viajes.controller.php";
+require_once __DIR__ . '/../app/core/Router.php';
+require_once __DIR__ . '/../app/core/init.controller.php';
+require_once __DIR__ . '/../app/controllers/home/home.controller.php';
+require_once __DIR__ . '/../app/controllers/usuarios/usuarios.controller.php';
+require_once __DIR__ . '/../app/controllers/vehiculos/vehiculos.controller.php';
+require_once __DIR__ . '/../app/controllers/viajes/viajes.controller.php';
 $router = new Router();
 $router->get('/', [controllerhome::class, 'index']);
 $router->get('/home', [controllerhome::class, 'index']);
