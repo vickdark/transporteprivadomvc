@@ -1,9 +1,9 @@
 services:
   web:
     build: .
-    container_name: transporteprivado_web
+    container_name: transporteprivado_web_mvc
     ports:
-      - "8080:80"
+      - "3000:80"
     volumes:
       - "C:/transporteprivadomvc:/var/www/transporteprivadomvc"
     restart: unless-stopped
