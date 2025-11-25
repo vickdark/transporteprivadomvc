@@ -23,7 +23,6 @@
  <!-- AdminLTE App -->
  <script src="<?= asset('assets/resourses/dist/js/adminlte.min.js') ?>"></script>
  <!-- AdminLTE for demo purposes -->
- <script src="<?= asset('assets/resourses/dist/js/demo.js') ?>"></script>
  <script src="<?= asset('assets/resourses/js/darkmode.js') ?>"></script>
  </body>
  
