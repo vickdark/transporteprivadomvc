@@ -18,6 +18,9 @@
  <script src="<?= asset('assets/resourses/plugins/jquery/jquery.min.js') ?>"></script>
  <!-- Bootstrap 4 -->
  <script src="<?= asset('assets/resourses/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+ <!-- DataTables -->
+ <script src="<?= asset('assets/resourses/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
+ <script src="<?= asset('assets/resourses/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
  <!-- OverlayScrollbars -->
  <script src="<?= asset('assets/resourses/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') ?>"></script>
  <!-- AdminLTE App -->
