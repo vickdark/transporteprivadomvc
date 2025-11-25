@@ -15,11 +15,13 @@ require_once __DIR__ . '/../app/core/helpers.php';
 // Incluir la conexión a la base de datos
 require_once __DIR__ . '/../app/core/database.php';
 
-// Incluir el controlador inicial
-require_once __DIR__ . '/../app/core/init.controller.php';
-
 // Incluir los modelos
-require_once __DIR__ . '/../app/models/Vehiculo.php';
+require_once __DIR__ . '/../app/models/vehiculos/vehiculo.models.php';
+
+/* Incluir el controlador inicial - este controlador se encarga de renderizar la vista init.php
+El controlador init.controller.php se encarga de renderizar la vista init.php
+Esta vista se encarga de renderizar la plantilla base y la vista específica */
+require_once __DIR__ . '/../app/controllers/init.controller.php';
 
 // Incluir los controladores
 require_once __DIR__ . '/../app/controllers/home/home.controller.php';
@@ -30,19 +32,23 @@ require_once __DIR__ . '/../app/controllers/viajes/viajes.controller.php';
 // Incluir el Router y sus componentes
 $router = new Router();
 
-// Definir las rutas
+
 $router->get('/', [controllerhome::class, 'index']);
 $router->get('/home', [controllerhome::class, 'index']);
+
+// Usuarios CRUD
 $router->get('/usuarios', [controllerusuarios::class, 'index']);
-$router->get('/vehiculos', [controllervehiculos::class, 'index']);
-$router->get('/viajes', [controllerviajes::class, 'index']);
 
 // Vehículos CRUD
+$router->get('/vehiculos', [controllervehiculos::class, 'index']);
 $router->get('/vehiculos/list', [controllervehiculos::class, 'list']);
 $router->post('/vehiculos/create', [controllervehiculos::class, 'create']);
 $router->get('/vehiculos/show/{id}', [controllervehiculos::class, 'show']);
 $router->post('/vehiculos/update/{id}', [controllervehiculos::class, 'update']);
 $router->post('/vehiculos/delete/{id}', [controllervehiculos::class, 'delete']);
+
+// Viajes CRUD
+$router->get('/viajes', [controllerviajes::class, 'index']);
 
 // Ejecutar el Router
 $router->run($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
