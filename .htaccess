@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /
+RewriteBase /transporteprivadomvc/
 # Permite acceso directo a recursos bajo /public
 RewriteRule ^public/ - [L]
 # Si no es un archivo o directorio real, enruta a public/index.php
@@ -7,3 +7,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ public/index.php [L]
 DirectoryIndex public/index.php
+Options -Indexes

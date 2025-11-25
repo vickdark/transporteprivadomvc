@@ -15,16 +15,16 @@
  <!-- ./wrapper -->
 
  <!-- jQuery -->
- <script src="public/assets/resourses/plugins/jquery/jquery.min.js"></script>
+ <script src="<?= asset('assets/resourses/plugins/jquery/jquery.min.js') ?>"></script>
  <!-- Bootstrap 4 -->
- <script src="public/assets/resourses/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="<?= asset('assets/resourses/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
  <!-- OverlayScrollbars -->
- <script src="public/assets/resourses/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+ <script src="<?= asset('assets/resourses/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') ?>"></script>
  <!-- AdminLTE App -->
- <script src="public/assets/resourses/dist/js/adminlte.min.js"></script>
+ <script src="<?= asset('assets/resourses/dist/js/adminlte.min.js') ?>"></script>
  <!-- AdminLTE for demo purposes -->
- <script src="public/assets/resourses/dist/js/demo.js"></script>
- <script src="public/assets/resourses/js/darkmode.js"></script>
+ <script src="<?= asset('assets/resourses/dist/js/demo.js') ?>"></script>
+ <script src="<?= asset('assets/resourses/js/darkmode.js') ?>"></script>
  </body>
  
  </html>

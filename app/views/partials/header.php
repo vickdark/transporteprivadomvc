@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="public/assets/resourses/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?= asset('assets/resourses/plugins/fontawesome-free/css/all.min.css') ?>">
     <!-- Theme style -->
-    <link rel="stylesheet" href="public/assets/resourses/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?= asset('assets/resourses/dist/css/adminlte.min.css') ?>">
 </head>
 
 <body class="hold-transition sidebar-mini layout-navbar-fixed sidebar-collapse">
