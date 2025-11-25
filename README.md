@@ -60,3 +60,34 @@ $router->get('/<modulo>', [ControllerModulo::class, 'index']);
 ## Home por Defecto
 - Rutas: `'/'` y `'/home'` → `controllerhome::index` (`public/index.php:7-8`).
 - Página: `app/views/home/index.php:1`.
+
+## Router Modular (app/core/router)
+- Componentes internos utilizados por `app/core/Router.php`:
+  - `RouteCollection`: almacena las rutas registradas.
+  - `PatternCompiler`: convierte patrones declarativos (`/usuarios/{id}`) a expresiones regulares con grupos con nombre y barra final opcional.
+  - `Dispatcher`: selecciona la ruta por método y regex, extrae parámetros, invoca el handler o responde 404.
+  - `Route`: contenedor con `method`, `pattern`, `regex` y `handler`.
+
+- Flujo de despacho:
+  1. `Router->add` compila el patrón y guarda una `Route` en la colección.
+  2. `Router->run` entrega todas las rutas al `Dispatcher` junto al `REQUEST_URI` y `REQUEST_METHOD`.
+  3. `Dispatcher` compara el `path` contra el `regex` de cada ruta que coincide en método.
+  4. Extrae parámetros por nombre y ejecuta el handler (`callable` o `[Clase, metodo]`).
+  5. Si no hay coincidencia, establece `http_response_code(404)` y muestra `"404"`.
+
+- Patrones y parámetros:
+  - `{param}` se traduce a `(?P<param>[^/]+)`, permitiendo acceso por nombre en el handler.
+  - `/?$` hace opcional la barra final: `/vehiculos` y `/vehiculos/` coinciden.
+
+- Ejemplo con parámetros:
+```php
+$router->get('/usuarios/{id}', [controllerusuarios::class, 'show']);
+// GET /usuarios/123 → handler recibe ['id' => '123']
+```
+
+- Ubicaciones clave:
+  - `app/core/Router.php` (fachada de registro/ejecución)
+  - `app/core/router/RouteCollection.php`
+  - `app/core/router/PatternCompiler.php`
+  - `app/core/router/Dispatcher.php`
+  - `app/core/router/Route.php`
